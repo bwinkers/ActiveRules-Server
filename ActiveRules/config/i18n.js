@@ -52,6 +52,8 @@ module.exports.i18n = {
   *                                                                           *
   ****************************************************************************/
 
-  // localesDirectory: '/config/locales'
+  // localesDirectory: '/config/locales',
+  
+  //objectNotation: true
 
 };
