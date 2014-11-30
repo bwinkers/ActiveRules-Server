@@ -54,6 +54,7 @@ module.exports.i18n = {
 
   // localesDirectory: '/config/locales',
   
-  //objectNotation: true
+  // enable object notation
+  objectNotation: true
 
 };
