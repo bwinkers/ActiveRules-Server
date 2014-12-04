@@ -26,5 +26,8 @@ apt-get install -y nodejs
 # Install the Sails application framework
 npm -g install sails
 
+# Install Sails Passport Auth
+npm install sails-generate-auth
+
 # Run a little cleanup
 apt-get -y autoremove
