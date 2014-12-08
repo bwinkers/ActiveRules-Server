@@ -32,9 +32,14 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  },
+  // Use a route instead of a view so ew can override the title and HEAD info
+  '/': 'PageController.home',
+  
+  //'/': {
+  //  view: 'homepage'
+  //},
+  
+  
 
   /***************************************************************************
   *                                                                          *
