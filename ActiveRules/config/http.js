@@ -21,7 +21,7 @@ module.exports.http = {
   *                                                                           *
   ****************************************************************************/
 
-  // middleware: {
+  middleware: {
 
   /***************************************************************************
   *                                                                          *
@@ -30,23 +30,26 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-    // order: [
-    //   'startRequestTimer',
-    //   'cookieParser',
-    //   'session',
-    //   'myRequestLogger',
-    //   'bodyParser',
-    //   'handleBodyParserError',
-    //   'compress',
-    //   'methodOverride',
-    //   'poweredBy',
-    //   '$custom',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
+    order: [
+      'startRequestTimer',
+      'cookieParser',
+      'session',
+      'passportInit',    // <==== passport HTTP middleware should run after "session"
+      'passportSession', // <==== (https://github.com/jaredhanson/passport#middleware)
+      'requestLogger',
+      'bodyParser',
+      'handleBodyParserError',
+      'compress',
+      'methodOverride',
+      'poweredBy',
+      '$custom',
+      'activeRulesSite',
+      'router',
+      'www',
+      'favicon',
+      '404',
+      '500'
+    ],
 
   /****************************************************************************
   *                                                                           *
@@ -54,10 +57,18 @@ module.exports.http = {
   *                                                                           *
   ****************************************************************************/
 
-    // myRequestLogger: function (req, res, next) {
-    //     console.log("Requested :: ", req.method, req.url);
-    //     return next();
-    // }
+    requestLogger: function (req, res, next) {
+      console.log("Requested :: ", req.method, req.url);
+      return next();
+    },
+    
+    activeRulesSite: function (req, res, next) {
+      res.site = {'name': 'ActiveRules',
+                  'copyright': 'ActiveRules &copy; 2014',
+                  'hostname': req.host
+                };
+      return next();
+    }
 
 
   /***************************************************************************
@@ -71,7 +82,7 @@ module.exports.http = {
 
     // bodyParser: require('skipper')
 
-  // },
+  }
 
   /***************************************************************************
   *                                                                          *
