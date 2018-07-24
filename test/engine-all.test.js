@@ -8,7 +8,6 @@ function engineFactory(rules) {
   return new AR.Engine(rules);
 }
 
-
 async function factSenior (params, engine) {
   return 65
 }
