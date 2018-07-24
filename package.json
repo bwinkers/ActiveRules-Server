@@ -1,0 +1,25 @@
+{
+  "name": "activerules-server",
+  "version": "0.1.0",
+  "description": "Web-optimized Javascript rules engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwinkers/ActiveRules-Server.git"
+  },
+  "keywords": [
+    "rules",
+    "activerules",
+    "node",
+    "json"
+  ],
+  "author": "Brian Winkers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwinkers/ActiveRules-Server/issues"
+  },
+  "homepage": "https://github.com/bwinkers/ActiveRules-Server#readme"
+}
