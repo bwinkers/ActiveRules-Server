@@ -4,7 +4,9 @@
   "description": "Web-optimized Javascript rules engine",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha && npm run lint --silent",
+    "lint": "standard --verbose | snazzy || true",
+    "lint:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,14 @@
   "homepage": "https://github.com/bwinkers/ActiveRules-Server#readme",
   "dependencies": {
     "json-rules-engine": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "dirty-chai": "^2.0.1",
+    "lint": "^1.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.4",
+    "sinon-chai": "^3.2.0"
   }
 }
