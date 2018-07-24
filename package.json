@@ -30,9 +30,11 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
+    "clone": "^2.1.1",
     "dirty-chai": "^2.0.1",
     "lint": "^1.1.2",
     "mocha": "^5.2.0",
+    "perfy": "^1.1.2",
     "sinon": "^6.1.4",
     "sinon-chai": "^3.2.0",
     "snazzy": "^7.1.1",
