@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/bwinkers/ActiveRules-Server/issues"
   },
-  "homepage": "https://github.com/bwinkers/ActiveRules-Server#readme"
+  "homepage": "https://github.com/bwinkers/ActiveRules-Server#readme",
+  "dependencies": {
+    "json-rules-engine": "^2.3.0"
+  }
 }
