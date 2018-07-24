@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha && npm run lint --silent",
-    "lint": "standard --verbose | snazzy || true",
+    "lint": "standard  --global it --global expect --global describe --global beforeEach -- global factories --verbose | snazzy || true",
     "lint:fix": "standard --fix"
   },
   "repository": {
