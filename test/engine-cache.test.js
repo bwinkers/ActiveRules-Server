@@ -28,10 +28,8 @@ describe('Engine: cache', () => {
     return 22
   }
   function setup (factOptions) {
-    //factSpy.reset()
-    //eventSpy.reset()
-    factSpy = sinon.spy()
-    eventSpy = sinon.spy()
+    factSpy.resetHistory()
+    eventSpy.resetHistory()
     engine = engineFactory()
     let determineDrinkingAge = factories.rule({ conditions, event, priority: 100 })
     engine.addRule(determineDrinkingAge)
