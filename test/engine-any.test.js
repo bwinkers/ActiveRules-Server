@@ -28,7 +28,7 @@ describe('Engine: "any" conditions', () => {
     let eventSpy = sinon.spy()
     let ageSpy = sinon.stub()
     beforeEach(() => {
-      //eventSpy.reset()
+      eventSpy.resetHistory()
       let rule = factories.rule({ conditions, event })
       engine = engineFactory()
       engine.addRule(rule)
@@ -72,9 +72,9 @@ describe('Engine: "any" conditions', () => {
     let ageSpy = sinon.stub()
     let segmentSpy = sinon.stub()
     beforeEach(() => {
-      //eventSpy.reset()
-      //ageSpy.reset()
-      //segmentSpy.reset()
+      eventSpy.resetHistory()
+      ageSpy.resetHistory()
+      segmentSpy.resetHistory()
       let rule = factories.rule({ conditions, event })
       engine = engineFactory()
       engine.addRule(rule)
@@ -96,9 +96,6 @@ describe('Engine: "any" conditions', () => {
     })
 
     it('does not emit when all conditions fail', async () => {
-      let eventSpy = sinon.spy()
-      let ageSpy = sinon.stub()
-      let segmentSpy = sinon.stub()
       segmentSpy.returns('north-american')
       ageSpy.returns(100)
       await engine.run()
