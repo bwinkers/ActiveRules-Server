@@ -29,7 +29,7 @@ describe('Engine: operator', () => {
   }
   let eventSpy = sinon.spy()
   function setup (conditions = baseConditions) {
-    eventSpy.reset()
+    eventSpy.resetHistory()
     let engine = engineFactory()
     let rule = factories.rule({ conditions, event })
     engine.addRule(rule)
