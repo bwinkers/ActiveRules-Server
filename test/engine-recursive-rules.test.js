@@ -42,7 +42,7 @@ describe('Engine: recursive rules', () => {
 
   let eventSpy = sinon.spy()
   function setup (conditions = nestedAnyCondition) {
-    //eventSpy.reset()
+    eventSpy.resetHistory()
     eventSpy = sinon.spy()
     engine = engineFactory()
     let rule = factories.rule({ conditions, event })
