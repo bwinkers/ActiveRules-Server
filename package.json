@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/bwinkers/ActiveRules-Server#readme",
   "dependencies": {
+    "crypto-promise": "^2.1.0",
     "djv": "^2.1.0",
     "json-rules-engine": "^2.3.0"
   },
