@@ -39,7 +39,7 @@ describe('Engine: "all" conditions', () => {
     }
     let eventSpy = sinon.spy()
     beforeEach(() => {
-      //eventSpy.reset()
+      eventSpy.resetHistory()
       let rule = factories.rule({ conditions, event })
       engine = engineFactory()
       engine.addRule(rule)
@@ -53,7 +53,6 @@ describe('Engine: "all" conditions', () => {
     })
 
     it('does not emit when the condition fails', () => {
-      let eventSpy = sinon.spy()
       engine.addFact('age', factSenior)
       engine.run()
       expect(eventSpy).to.not.have.been.calledWith(event)
@@ -80,7 +79,7 @@ describe('Engine: "all" conditions', () => {
     }
     let eventSpy = sinon.spy()
     beforeEach(() => {
-      //eventSpy.reset()
+      eventSpy.resetHistory()
       let rule = factories.rule({ conditions, event })
       engine = engineFactory()
       engine.addRule(rule)
