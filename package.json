@@ -4,7 +4,7 @@
   "description": "Web-optimized Javascript rules engine",
   "main": "index.js",
   "scripts": {
-    "test": "mocha && npm run lint --silent",
+    "test": "nyc mocha && npm run lint --silent",
     "lint": "standard  --global it --global expect --global describe --global beforeEach -- global factories --verbose | snazzy || true",
     "lint:fix": "standard --fix"
   },
