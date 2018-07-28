@@ -47,7 +47,7 @@ describe('Engine: cache', () => {
     expect(engine.prioritizedRules[2][0].priority).to.equal(1)
   })
 
-  it('clears re-propriorizes the rules when a new Rule is added', () => {
+  it('clears reprioritizes the rules when a new Rule is added', () => {
     engine.prioritizeRules()
     expect(engine.prioritizedRules.length).to.equal(3)
     engine.addRule(factories.rule())
