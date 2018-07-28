@@ -1,3 +1,12 @@
 /node_modules/
 /nbproject/private/
 /.nyc_output/
+/coverage/lcov.info
+/coverage/lcov-report/base.css
+/coverage/lcov-report/prettify.js
+/coverage/lcov-report/ActiveRules.js.html
+/coverage/lcov-report/block-navigation.js
+/coverage/lcov-report/sort-arrow-sprite.png
+/coverage/lcov-report/sorter.js
+/coverage/lcov-report/prettify.css
+/coverage/lcov-report/index.html
