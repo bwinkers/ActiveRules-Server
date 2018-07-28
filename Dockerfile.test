@@ -1,0 +1,20 @@
+# This official base image contains node.js and npm
+FROM node:10
+
+ARG VERSION=0.1.0
+
+# Copy the application files
+WORKDIR /usr/src
+COPY . /usr/src
+
+LABEL license=MIT \
+      version=$VERSION
+
+# Set required environment variables
+ENV NODE_ENV dev
+
+# Download the required packages for production
+RUN npm update
+
+# Make the application run when running the container
+CMD ["npm", "test"]
