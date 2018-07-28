@@ -4,12 +4,12 @@ const ActiveRules = require('../src/ActiveRules.js')
 const AR = new ActiveRules()
 const sinon = require('sinon')
 
-function engineFactory(rules) {
-  return new AR.Engine(rules);
+function engineFactory (rules) {
+  return new AR.Engine(rules)
 }
 
 const perfy = require('perfy')
-const deepClone = require('clone');
+const deepClone = require('clone')
 
 describe('Performance', () => {
   let baseConditions = {

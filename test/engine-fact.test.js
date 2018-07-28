@@ -3,8 +3,8 @@ const ActiveRules = require('../src/ActiveRules.js')
 const AR = new ActiveRules()
 const sinon = require('sinon')
 
-function engineFactory(rules, engineOptions) {
-  return new AR.Engine(rules, engineOptions);
+function engineFactory (rules, engineOptions) {
+  return new AR.Engine(rules, engineOptions)
 }
 
 const CHILD = 14

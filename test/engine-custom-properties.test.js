@@ -4,8 +4,8 @@ const ActiveRules = require('../src/ActiveRules.js')
 const AR = new ActiveRules()
 const sinon = require('sinon')
 
-function engineFactory(rules) {
-  return new AR.Engine(rules);
+function engineFactory (rules) {
+  return new AR.Engine(rules)
 }
 
 describe('Engine: custom properties', () => {
@@ -60,8 +60,8 @@ describe('Engine: custom properties', () => {
       let rule = new AR.Rule()
       let ruleProperties = factories.rule()
       rule.setPriority(ruleProperties.priority)
-          .setConditions(ruleProperties.conditions)
-          .setEvent(ruleProperties.event)
+        .setConditions(ruleProperties.conditions)
+        .setEvent(ruleProperties.event)
       rule.customId = 'uuid'
       engine.addRule(rule)
       expect(engine.rules[0]).to.have.property('customId')
