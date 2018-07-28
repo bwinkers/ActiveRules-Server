@@ -3,8 +3,8 @@
 const ActiveRules = require('../src/ActiveRules.js')
 const AR = new ActiveRules()
 
-function engineFactory(rules) {
-  return new AR.Engine(rules);
+function engineFactory (rules) {
+  return new AR.Engine(rules)
 }
 
 describe('Engine: failure', () => {
