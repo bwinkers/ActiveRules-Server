@@ -3,8 +3,8 @@
 const ActiveRules = require('../src/ActiveRules.js')
 const AR = new ActiveRules()
 
-function subject(rules) {
-  return new AR.Engine(rules);
+function subject (rules) {
+  return new AR.Engine(rules)
 }
 
 describe('json-business-subject', () => {
