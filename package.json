@@ -4,7 +4,7 @@
   "description": "Web-optimized Javascript rules engine",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha && npm run lint --silent",
+    "test": "mocha && npm run lint --silent",
     "lint": "standard  --global it --global expect --global describe --global beforeEach -- global factories --verbose | snazzy || true",
     "lint:fix": "standard --fix"
   },
@@ -27,7 +27,8 @@
   "dependencies": {
     "crypto-promise": "^2.1.0",
     "djv": "^2.1.0",
-    "json-rules-engine": "^2.3.0"
+    "json-rules-engine": "^2.3.0",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
