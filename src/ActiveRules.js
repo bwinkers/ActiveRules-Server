@@ -3,7 +3,7 @@
 const { Fact, Rule, Operator, Engine } = require('json-rules-engine')
 const djv = require('djv')
 const R = require('ramda')
-const arError = require('./errors/ARError.js')
+const arError = require('./ActiveRulesError.js')
 
 class ActiveRules {
   
