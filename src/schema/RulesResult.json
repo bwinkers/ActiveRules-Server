@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "data": { "type": "object" },
+    "errors": { "type": "object" },
+    "actions": { "type": "object" }
+  },
+  "required": ["data", "errors", "actions"]
+}
