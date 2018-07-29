@@ -1,9 +1,12 @@
-'use strict'
-
+/**
+ * The main ActiveulRules class, everything it can do can be accessed through this.
+ */
 const { Fact, Rule, Operator, Engine } = require('json-rules-engine')
 const djv = require('djv')
 const R = require('ramda')
 const arError = require('./ActiveRulesError.js')
+const arObject = require('./ActiveRulesObject.js')
+const Activity = require('./Activity.js')
 
 class ActiveRules {
   
@@ -14,7 +17,9 @@ class ActiveRules {
     this.Engine = Engine
     this.Validator = djv
     this.R = R
-    this.arError = arError
+    this.Error = arError
+    this.Object = arObject
+    this.Activity = Activity
   }
   
   /**
