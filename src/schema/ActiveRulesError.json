@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "message": { "type": "string" },
+    "fileName": { "type": "string" },
+    "lineNumber": { "type": "number" },
+    }
+  },
+  "required": ["message"]
+}
