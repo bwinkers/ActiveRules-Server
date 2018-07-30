@@ -26,26 +26,26 @@
   },
   "homepage": "https://github.com/bwinkers/ActiveRules-Server#readme",
   "dependencies": {
-    "crypto-promise": "^2.1.0",
-    "djv": "^2.1.0",
-    "json-rules-engine": "^2.3.0",
-    "ramda": "^0.25.0"
+    "crypto-promise": "2.1.0",
+    "djv": "2.1.0",
+    "json-rules-engine": "2.3.0",
+    "ramda": "0.25.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1",
-    "chai-json-schema": "^1.5.0",
-    "clone": "^2.1.1",
-    "coveralls": "^3.0.2",
-    "dirty-chai": "^2.0.1",
-    "jsverify": "^0.8.3",
-    "lint": "^1.1.2",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
-    "perfy": "^1.1.2",
-    "sinon": "^6.1.4",
-    "sinon-chai": "^3.2.0",
-    "snazzy": "^7.1.1",
-    "standard": "^11.0.1"
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "chai-json-schema": "1.5.0",
+    "clone": "2.1.1",
+    "coveralls": "3.0.2",
+    "dirty-chai": "2.0.1",
+    "jsverify": "0.8.3",
+    "lint": "1.1.2",
+    "mocha": "5.2.0",
+    "nyc": "12.0.2",
+    "perfy": "1.1.2",
+    "sinon": "6.1.4",
+    "sinon-chai": "3.2.0",
+    "snazzy": "7.1.1",
+    "standard": "11.0.1"
   }
 }
