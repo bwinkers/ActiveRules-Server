@@ -1,4 +1,7 @@
 language: node_js
+env:
+  global:
+    - CC_TEST_REPORTER_ID=484077aa907c8a7c3c1ba12bf361142aa5ea958b454bdd8077e1d3dec5b0b2f6
 install:
   - npm install
 node_js:
