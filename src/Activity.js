@@ -2,10 +2,12 @@
  * An ActiveRules Activity defines a process and sets of rules around.
  */
 
-const ARObject = require('./ActiveRulesObject.js')
+const ActiveRulesObject = require('./ActiveRulesObject.js')
 
-class Activity extends ARObject {
-  
+class Activity extends ActiveRulesObject {
+  constructor(...args) {
+    super(...args)
+  }
 }
 
-module.exports = Activity;
+module.exports = Activity
