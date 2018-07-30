@@ -10,5 +10,18 @@ A web-optimized rules processing engine.
 
 Uses JSON schema to define and validate objects.
 
+## Testing
+
+```
+npm test
+```
+
+### Testing in Docker
+
+```
+docker build -t activerules -f Dockerfile.test .
+docker run activerules
+```
+
 
 
