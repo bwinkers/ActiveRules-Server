@@ -7,6 +7,7 @@ const R = require('ramda')
 const arError = require('./ActiveRulesError.js')
 const arObject = require('./ActiveRulesObject.js')
 const Activity = require('./Activity.js')
+const RulesResult = require('./RulesResult.js')
 
 class ActiveRules {
   
