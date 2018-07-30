@@ -1,8 +1,10 @@
-const ARObject = require('./ActiveRulesObject.js')
+const ActiveRulesObject = require('./ActiveRulesObject.js')
 
-class ActiveRulesError extends ARObject {
-    constructor(...args) {
-        super(...args)
-        
-    }
+class ActiveRulesError extends ActiveRulesObject {
+  
+  constructor(...args) {
+    super(...args)
+  }
 }
+
+module.exports = ActiveRulesError;
