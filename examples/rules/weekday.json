@@ -1,0 +1,15 @@
+{
+  "conditions": {
+    "all": [{
+      "fact": "dayOfWeek",
+      "operator": "in",
+      "value": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] 
+    }]
+  },
+  "event": {
+    "type": "message",
+    "params": {
+      "data": "is a weekday"
+    }
+  }
+}
