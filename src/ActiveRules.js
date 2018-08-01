@@ -24,6 +24,21 @@ class ActiveRules {
   }
   
   /**
+   * Validate then run rules
+   */
+  async run(rules, data) {
+    
+    try {
+      
+      data = await this.validate(data);
+      return await this.runRules(rules, data);
+
+    } catch(error) {
+      return error
+    }
+  }
+  
+  /**
    * Process a set of data using provided rules.
    * An ActiveRules rulesResult object set will be returned. 
    * 
@@ -35,16 +50,39 @@ class ActiveRules {
    * @return {Object} rulesResult.errors - ActiveRules Errors object
    * @return {Object} rulesResult.actions - ActiveRules Actions object
    */
-  rulesResult(rules, data) {
-  
-    /**
-     * Validate, scrub and transform data.
-     * Create errors and stop processing if invalid.
-     * 
-     * Process Rules and create actions and or errors.
-     * Return RulesResults object.
-     */
+  async runRules(rules, data) {
+    
+    try {
+      
+      const engine = new this.Engine
+      
+      rules.forEach(rule => {
+        engine.addRule(rule)
+      })
+      
+      const baseResult = await engine.run(data)
+      
+      delete data['success-events']
+      
+      return { actions: baseResult, data };
 
+    } catch(error) {
+      return error
+    }
+  }
+  
+  /**
+   * Validate data
+   */
+  async validate(data) {
+    
+    try {
+      
+      return data
+
+    } catch(error) {
+      return error
+    }
   }
 }
 
