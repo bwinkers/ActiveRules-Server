@@ -1,0 +1,15 @@
+{
+  "conditions": {
+    "all": [{
+      "fact": "dayOfWeek",
+      "operator": "in",
+      "value": ["Saturday", "Sunday"] 
+    }]
+  },
+  "event": {
+    "type": "message",
+    "params": {
+      "data": "is a weekend"
+    }
+  }
+}
