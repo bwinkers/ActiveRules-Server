@@ -55,7 +55,7 @@ let facts = { displayMessage: true }
 engine
   .run(facts)
   .then(triggeredEvents => { // engine returns a list of events with truthy conditions
-    //sconsole.log(triggeredEvents)
+    //console.log(triggeredEvents)
     triggeredEvents.map(event => console.log(event.params.data.green))
   })
   .catch(console.log)
